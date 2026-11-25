@@ -1,1 +1,1 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();const theme=document.getElementById('theme');try{document.documentElement.classList.toggle('dark',localStorage.getItem('theme')==='dark')}catch(e){}if(theme)theme.addEventListener('click',()=>{const dark=document.documentElement.classList.toggle('dark');try{localStorage.setItem('theme',dark?'dark':'light')}catch(e){}});
